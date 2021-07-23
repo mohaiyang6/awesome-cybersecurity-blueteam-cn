@@ -1,0 +1,1072 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.0">
+    
+    
+      
+        <title>🍯 蜜罐 - 攻防对抗·蓝队清单</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.fe914879.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ba0d045b.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ffffff">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="white" data-md-color-accent="red">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="攻防对抗·蓝队清单" class="md-header__button md-logo" aria-label="攻防对抗·蓝队清单" data-md-component="logo">
+      
+  <img src="../assets/logo_white.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            攻防对抗·蓝队清单
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              🍯 蜜罐
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="攻防对抗·蓝队清单" class="md-nav__button md-logo" aria-label="攻防对抗·蓝队清单" data-md-component="logo">
+      
+  <img src="../assets/logo_white.png" alt="logo">
+
+    </a>
+    攻防对抗·蓝队清单
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        index
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x1_blue_team-resources/" class="md-nav__link">
+        🎖️ 蓝队资源大合集
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x2_threat_hunting/" class="md-nav__link">
+        🏹️ 威胁狩猎大合集
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x3_threat_intelligence/" class="md-nav__link">
+        ✉️ 威胁情报大合集
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x4_incident_response/" class="md-nav__link">
+        🚑 应急响应大合集
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x5_ioc_list/" class="md-nav__link">
+        🔍 威胁情报数据源
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x6_VMs/" class="md-nav__link">
+        💿 虚拟机&集成环境
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        🍯 蜜罐
+      </a>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0x8_malware_analysis/" class="md-nav__link">
+        🦠 恶意软件分析
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <blockquote>
+<p>转载自<a href="https://github.com/paralax/awesome-honeypots">awesome-honeypots</a></p>
+</blockquote>
+<h1 id="_1">最优秀的蜜罐列表</h1>
+<p>优秀的蜜罐、组件等等相关的工具列表，分为 Web、服务等多个类别，重点放在开源项目上。</p>
+<h1 id="_2">目录</h1>
+<ul>
+<li><a href="#related-lists">相关列表</a></li>
+<li><a href="#honeypots">蜜罐</a></li>
+<li><a href="#honeyd-tools">Honeyd 工具</a></li>
+<li><a href="#network-and-artifact-analysis">网络与行为分析</a></li>
+<li><a href="#data-tools">数据分析工具</a></li>
+<li><a href="#guides">指南</a></li>
+</ul>
+<h2 id="_3">相关列表</h2>
+<ul>
+<li><a href="https://github.com/caesar0301/awesome-pcaptools">awesome-pcaptools</a> 网络流量分析</li>
+<li><a href="https://github.com/rshipp/awesome-malware-analysis">awesome-malware-analysis</a> 与上表有些重复，更侧重恶意软件分析</li>
+</ul>
+<h2 id="_4">蜜罐</h2>
+<ul>
+<li>
+<p>数据库蜜罐</p>
+<ul>
+<li><a href="https://github.com/SecurityTW/delilah">Delilah</a> - Python 编写的 Elasticsearch 蜜罐</li>
+<li><a href="https://github.com/mycert/ESPot">ESPot</a> - 一个用 NodeJS 编写的 Elasticsearch 蜜罐，用于对 CVE-2014-3120 的利用</li>
+<li><a href="https://github.com/jordan-wright/elastichoney">Elastic honey</a> - 简单的 Elasticsearch 蜜罐</li>
+<li><a href="https://github.com/Plazmaz/MongoDB-HoneyProxy">MongoDB-HoneyProxy</a> - MongoDB 蜜罐代理</li>
+<li><a href="https://github.com/torque59/nosqlpot">NoSQLpot</a> - NoSQL 蜜罐框架</li>
+<li><a href="https://github.com/sjinks/mysql-honeypotd">mysql-honeypotd</a> - C 编写的低交互 MySQL 蜜罐</li>
+<li><a href="https://github.com/schmalle/MysqlPot">MysqlPot</a> - MySQL 蜜罐</li>
+<li><a href="https://github.com/betheroot/pghoney">pghoney</a> - 低交互 Postgres 蜜罐</li>
+<li><a href="https://github.com/betheroot/sticky_elephant">sticky_elephant</a> - 中交互 postgresql 蜜罐</li>
+</ul>
+</li>
+<li>
+<p>Web 蜜罐</p>
+<ul>
+<li><a href="https://github.com/Argomirr/Honeypot">Bukkit Honeypot</a> Honeypot - Bukkit 的一个插件</li>
+<li><a href="https://github.com/eymengunay/EoHoneypotBundle">EoHoneypotBundle</a> - Symfony2 类型的蜜罐</li>
+<li><a href="https://github.com/mushorg/glastopf">Glastopf</a> - Web 应用蜜罐</li>
+<li><a href="http://ghh.sourceforge.net">Google Hack Honeypot</a> - 旨在提供针对那些使用搜索引擎探测资源的攻击者的侦察</li>
+<li><a href="https://github.com/msurguy/Honeypot">Laravel Application Honeypot</a> - Honeypot - Laravel 应用程序的简单垃圾邮件预防软件包</li>
+<li><a href="https://github.com/schmalle/Nodepot">Nodepot</a>  - NodeJS Web 应用蜜罐</li>
+<li><a href="https://github.com/schmalle/servletpot">Servletpot</a> - Web 应用蜜罐</li>
+<li><a href="https://shadowd.zecure.org/overview/introduction/">Shadow Daemon</a> - 用于 PHP、Perl 和 Python 应用程序的模块化Web应用程序防火墙/高交互式蜜罐</li>
+<li><a href="https://github.com/Cymmetria/StrutsHoneypot">StrutsHoneypot</a> - 基于 Struts Apache 2 的蜜罐</li>
+<li><a href="https://github.com/IllusiveNetworks-Labs/WebTrap">WebTrap</a> - 旨在创建欺骗性网页，重定向到真实网站</li>
+<li><a href="https://github.com/bjeborn/basic-auth-pot">basic-auth-pot (bap)</a> bap - HTTP 基本认证蜜罐</li>
+<li><a href="https://github.com/graneed/bwpot">bwpot</a> - Web 应用蜜罐</li>
+<li><a href="https://github.com/dmpayton/django-admin-honeypot">django-admin-honeypot</a> - 虚假的 Django 管理登录页面，记录未经授权的访问尝试</li>
+<li><a href="https://github.com/d1str0/drupot">drupo</a> - Drupal 蜜罐</li>
+<li><a href="https://github.com/bocajspear1/honeyhttpd">honeyhttpd</a> - 基于 Python 的 Web 服务器蜜罐构建工具</li>
+<li><a href="https://github.com/gfoss/phpmyadmin_honeypot">phpmyadmin_honeypot</a> - - 简单有效的 phpMyAdmin 蜜罐</li>
+<li><a href="https://github.com/threatstream/shockpot">shockpot</a> - 检测 Shell Shock 利用尝试的 Web 应用蜜罐</li>
+<li><a href="https://github.com/freak3dot/smart-honeypot">smart-honeypot</a> - PHP 脚本编写的智能蜜罐</li>
+<li>Snare/Tanner - Glastopf 的后继者</li>
+<li><a href="https://github.com/mushorg/snare">Snare</a> - 下一代高交互 honEypot</li>
+<li><a href="https://github.com/mushorg/tanner">Tanner</a> - 评估 SNARE 事件</li>
+<li><a href="https://github.com/CHH/stack-honeypot">stack-honeypot</a> - 将针对垃圾邮件机器人的陷阱插入到响应中</li>
+<li><a href="https://github.com/helospark/tomcat-manager-honeypot">tomcat-manager-honeypot</a> - Tomcat 蜜罐。记录请求并保存攻击者的 WAR 文件</li>
+<li>WordPress honeypots<ul>
+<li><a href="https://github.com/MartinIngesen/HonnyPotter">HonnyPotter</a> - WordPress 的登录蜜罐，用于收集和分析失败的登录尝试</li>
+<li><a href="https://github.com/kungfuguapo/HoneyPress">HoneyPress</a> - Docker 容器中基于 Python 的 WordPress 蜜罐</li>
+<li><a href="https://github.com/freak3dot/wp-smart-honeypot">wp-smart-honeypot</a> - 减少垃圾邮件的 WordPress 插件</li>
+<li><a href="https://github.com/gbrindisi/wordpot">wordpot</a> - WordPress 蜜罐</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>服务蜜罐</p>
+<ul>
+<li><a href="https://github.com/huuck/ADBHoney">ADBHoney</a> - 安卓低交互蜜罐. </li>
+<li><a href="https://github.com/packetflare/amthoneypot">AMTHoneypot</a> - 针对 Intel 的 AMT 固件漏洞（CVE-2017-5689）的蜜罐</li>
+<li><a href="https://github.com/ahoernecke/ensnare">Ensnare</a> - 易部署的 Ruby 蜜罐</li>
+<li><a href="https://github.com/foospidy/HoneyPy">HoneyPy</a> - 低交互蜜罐</li>
+<li><a href="https://github.com/UHH-ISS/honeygrove">Honeygrove</a> - 基于 Twisted 的多用途、模块化蜜罐</li>
+<li><a href="https://github.com/securitygeneration/Honeyport">Honeyport</a> - Bash 和 Python 写成的简单 honeyport</li>
+<li><a href="https://github.com/glaslos/honeyprint">Honeyprint</a> - 打印机蜜罐</li>
+<li><a href="https://hub.docker.com/r/lyrebird/honeypot-base/">Lyrebird</a> - 现代高交互蜜罐框架</li>
+<li><a href="https://github.com/Cymmetria/micros_honeypot">MICROS honeypot</a> - 在带有 Oracle Hospitality Simphony 的 Oracle Hospitality Applications (MICROS) 中检测 CVE-2018-2636 的低交互蜜罐</li>
+<li><a href="https://github.com/citronneur/rdpy">RDPy</a> - Python 实现的 RDP 蜜罐</li>
+<li><a href="https://github.com/r0hi7/HoneySMB">SMB Honeypot</a> -  可以捕获类似 Wannacry 的恶意软件的高交互 SMB 蜜罐</li>
+<li><a href="https://github.com/inguardians/toms_honeypot">Tom's Honeypot</a> - 低交互 Python 蜜罐</li>
+<li><a href="https://github.com/Cymmetria/weblogic_honeypot">WebLogic honeypot</a> - 在带有 Oracle WebLogic Server 的 Oracle Fusion Middleware 中检测 CVE-2017-10271 的低交互蜜罐</li>
+<li><a href="https://github.com/csirtgadgets/csirtg-honeypot">WhiteFace Honeypot</a> - 基于 Twisted 开发的针对 WhiteFace 蜜罐</li>
+<li><a href="https://github.com/Cymmetria/honeycomb_plugins">honeycomb_plugins</a> - Honeycomb 插件仓库，Cymmetria 的蜜罐框架</li>
+<li><a href="https://github.com/fygrave/honeyntp">honeyntp</a> - NTP 蜜罐</li>
+<li><a href="https://github.com/alexbredo/honeypot-camera">honeypot-camera</a> - 相机蜜罐</li>
+<li><a href="https://github.com/alexbredo/honeypot-ftp">honeypot-ftp</a> - FTP 蜜罐</li>
+<li><a href="https://github.com/honeytrap/honeytrap">honeytrap</a> - 用 Go 编写的高级蜜罐框架，可以连接其他蜜罐</li>
+<li><a href="https://github.com/gosecure/pyrdp">pyrdp</a> - Python 3 实现的 RDP 中间人库，能监视连接</li>
+<li><a href="https://github.com/dutchcoders/troje/">troje</a> - 围绕 LXC 容器的蜜罐，将每一个服务的连接都放到单独的 LXC 容器内</li>
+</ul>
+</li>
+<li>
+<p>分布式蜜罐</p>
+<ul>
+<li><a href="https://github.com/RevengeComing/DemonHunter">DemonHunter</a> - 低交互蜜罐服务器</li>
+</ul>
+</li>
+<li>
+<p>反蜜罐</p>
+<ul>
+<li><a href="https://github.com/andrew-morris/kippo_detect">kippo_detect</a> - 检测 Kippo 蜜罐</li>
+</ul>
+</li>
+<li>
+<p>ICS/SCADA 蜜罐</p>
+<ul>
+<li><a href="https://github.com/mushorg/conpot">Conpot</a> - ICS/SCADA 蜜罐</li>
+<li><a href="https://github.com/sjhilt/GasPot">GasPot</a> - Veeder Root Gaurdian AST, 常见于石油、天然气行业</li>
+<li><a href="http://scadahoneynet.sourceforge.net">SCADA honeynet</a> - 建立工业网络的蜜罐</li>
+<li><a href="https://github.com/sk4ld/gridpot">gridpot</a> - 模拟实际电网的开源蜜罐</li>
+<li><a href="http://www.digitalbond.com/blog/2007/07/24/scada-honeynet-article-in-infragard-publication/">scada-honeynet</a> - 模拟流行的 PLC 服务，更好地帮助 SCADA 研究人员了解暴露的控制系统设备的潜在风险</li>
+</ul>
+</li>
+<li>
+<p>其他/随机</p>
+<ul>
+<li><a href="https://github.com/naorlivne/dshp">DSHP</a> - 带有插件化支持的简单蜜罐</li>
+<li><a href="https://github.com/DataSoft/Nova">NOVA</a> 看起来像完整系统的蜜罐</li>
+<li><a href="https://github.com/upa/ofpot">OpenFlow Honeypot（OFPot）</a> - 基于 POX 的 OpenFlow 蜜罐，将未使用的IP地址的流量重定向到蜜罐中</li>
+<li><a href="https://pypi.org/project/opencanary/">OpenCanary</a> - 模块化、分布式蜜罐</li>
+<li><a href="https://github.com/cymmetria/ciscoasa_honeypot">ciscoasa_honeypot</a> 用于思科 ASA 低交互蜜罐，检测 CVE-2018-0101 远程代码执行漏洞</li>
+<li><a href="https://github.com/sa7mon/miniprint">miniprint</a> - 打印机中交互蜜罐</li>
+</ul>
+</li>
+<li>
+<p>僵尸网络 C&amp;C 工具</p>
+<ul>
+<li><a href="https://github.com/pjlantz/Hale">Hale</a> - 僵尸网络 C&amp;C 监视器</li>
+<li><a href="https://code.google.com/archive/p/dns-mole/">dnsMole</a> - 分析 DNS 流量，检测潜在的僵尸网络 C&amp;C 服务器和受感染的主机</li>
+</ul>
+</li>
+<li>
+<p>IPv6 攻击检测工具</p>
+<ul>
+<li><a href="https://github.com/mzweilin/ipv6-attack-detector/">ipv6-attack-detector</a>  - Honeynet 项目支持的 Googel Summer of Code 2012 项目</li>
+</ul>
+</li>
+<li>
+<p>动态代码检查工具包</p>
+<ul>
+<li><a href="https://www.frida.re">Frida</a> - 注入 JavaScript 来探索Windows、Mac、Linux、iOS 和 Android 上的应用程序</li>
+</ul>
+</li>
+<li>
+<p>将网站转换为服务器蜜罐</p>
+<ul>
+<li><a href="http://hihat.sourceforge.net/">HIHAT</a> - 将任意 PHP 页面转换成基于 Web 的高交互蜜罐</li>
+</ul>
+</li>
+<li>
+<p>恶意软件收集</p>
+<ul>
+<li><a href="https://bruteforcelab.com/kippo-malware">Kippo-Malware</a> - 用于在 Kippo SSH 蜜罐数据库中记录的 URL 上下载恶恶意文件的 Python 脚本</li>
+</ul>
+</li>
+<li>
+<p>分布式传感器部署</p>
+<ul>
+<li><a href="https://github.com/threatstream/mhn">Modern Honey Network</a> - 分布式 Snort 与蜜罐传感器管理，使用虚拟网络，最小指纹的 SNORT 安装，服务器提供隐形侦察与集中管理</li>
+</ul>
+</li>
+<li>
+<p>网络分析工具</p>
+<ul>
+<li><a href="https://code.google.com/archive/p/tracexploit/">Tracexploit</a> - 重放网络数据包</li>
+</ul>
+</li>
+<li>
+<p>日志匿名工具</p>
+<ul>
+<li><a href="http://code.google.com/archive/p/loganon/">LogAnon</a> - 日志匿名库</li>
+</ul>
+</li>
+<li>
+<p>低交互蜜罐（路由器后门）</p>
+<ul>
+<li><a href="https://github.com/knalli/honeypot-for-tcp-32764">Honeypot-32764</a> - 路由器后门蜜罐(TCP 32764).</li>
+<li><a href="https://github.com/lcashdol/WAPot">WAPot</a> - 能够观察家庭路由器流量的蜜罐</li>
+</ul>
+</li>
+<li>
+<p>HTTPS 代理</p>
+<ul>
+<li><a href="https://mitmproxy.org/">mitmproxy</a> - 拦截、检查、修改、重放流量</li>
+</ul>
+</li>
+<li>
+<p>系统插桩</p>
+<ul>
+<li><a href="https://sysdig.com/opensource/">Sysdig</a> - 捕获 Linux 系统的状态与活动，可以进行保存、过滤与分析的开源系统级探索工具</li>
+<li><a href="https://github.com/rabbitstack/fibratus">Fibratus</a> - 用于探索和跟踪 Windows 内核的工具</li>
+</ul>
+</li>
+<li>
+<p>检测 USB 恶意传播的蜜罐</p>
+<ul>
+<li><a href="https://github.com/honeynet/ghost-usb-honeypot">Ghost-usb</a> - 检测通过 USB 存储设备传播恶意软件的蜜罐</li>
+</ul>
+</li>
+<li>
+<p>数据采集</p>
+<ul>
+<li><a href="https://bruteforcelab.com/kippo2mysql">Kippo2MySQL</a> - 从 Kippo 的日志文件中提取一些基本的统计信息插入到数据库中</li>
+<li><a href="https://bruteforcelab.com/kippo2elasticsearch">Kippo2ElasticSearch</a> - 用于将 Kippo SSH 蜜罐数据从 MySQL 数据库传输到 ElasticSearch 实例（服务器或集群）的 Python 脚本</li>
+</ul>
+</li>
+<li>
+<p>被动网络审计框架解析工具</p>
+<ul>
+<li><a href="https://github.com/jusafing/pnaf">Passive Network Audit Framework（pnaf）</a> - 被动网络审计框架</li>
+</ul>
+</li>
+<li>
+<p>虚拟机监控工具</p>
+<ul>
+<li><a href="https://github.com/nsmfoo/antivmdetection">Antivmdetect</a> - 用于创建 VirtualBox 虚拟机模版的脚本，使检测虚拟机更困难</li>
+<li><a href="https://github.com/hatching/vmcloak">VMCloak</a> - Cuckoo 沙盒的自动虚拟机生成和隐藏</li>
+<li><a href="http://libvmi.com/">vmitools</a> - 带有 Python 接口的 C 库，可以轻松监视运行中的虚拟机的底层细节</li>
+</ul>
+</li>
+<li>
+<p>二进制调试器</p>
+<ul>
+<li><a href="https://github.com/hexgolems/pint">Hexgolems - Pint Debugger Backend</a> - 一个调试器后端与 Pin 的 Lua 接口</li>
+<li><a href="https://github.com/hexgolems/schem">Hexgolems - Schem Debugger Frontend</a> - 一个调试器前端</li>
+</ul>
+</li>
+<li>
+<p>移动应用分析工具</p>
+<ul>
+<li><a href="https://github.com/androguard/androguard">Androguard</a> - 安卓应用程序逆向工程工具</li>
+<li><a href="https://github.com/honeynet/apkinspector/">APKinspector</a> - 带有界面的安卓应用程序分析工具</li>
+</ul>
+</li>
+<li>
+<p>低交互蜜罐</p>
+<ul>
+<li><a href="https://sourceforge.net/projects/honeyperl/">Honeyperl</a> - 基于 Perl 的蜜罐，有很多插件</li>
+<li><a href="https://github.com/dtag-dev-sec/tpotce">T-Pot</a> - 为电信服务商 T-Mobile 提供的蜜罐</li>
+</ul>
+</li>
+<li>
+<p>蜜罐数据融合</p>
+<ul>
+<li><a href="https://projects.honeynet.org/hflow">HFlow2</a> - 用于蜜罐/网络分析的数据融合工具</li>
+</ul>
+</li>
+<li>
+<p>服务器</p>
+<ul>
+<li><a href="http://amunhoney.sourceforge.net">Amun</a> - 漏洞模拟蜜罐</li>
+<li><a href="https://github.com/trustedsec/artillery/">Artillery</a> - 开源蓝队工具，旨在通过多种办法保护 Linux 和 Windows 操作系统</li>
+<li><a href="http://baitnswitch.sourceforge.net">Bait and Switch</a> - 将恶意流量重定向到生产系统镜像的蜜罐</li>
+<li><a href="https://github.com/Ziemeck/bifrozt-ansible">Bifrozt</a> - 自动部署带有 ansible 的 bifrozt</li>
+<li><a href="http://conpot.org/">Conpot</a> - 低交互的工业控制系统蜜罐</li>
+<li><a href="https://github.com/johnnykv/heralding">Heralding</a> - 捕获凭据的蜜罐</li>
+<li><a href="https://github.com/CanadianJeff/honeywrt">HoneyWRT</a> - 基于 Python 的低交互蜜罐，旨在模拟攻击者可能攻击的服务或端口</li>
+<li><a href="https://github.com/provos/honeyd">Honeyd</a> 请查看<a href="#honeyd">更多 honeyd 工具</a></li>
+<li><a href="http://www.honeynet.org/node/773">Honeysink</a> - 开源网络陷阱，提供了检测与阻止指定网络上恶意流量的机制</li>
+<li><a href="https://github.com/stamparm/hontel">Hontel</a> - Telnet 蜜罐</li>
+<li><a href="http://www.keyfocus.net/kfsensor/">KFSensor</a> - 基于 Windows 的入侵检测系统蜜罐</li>
+<li><a href="http://labrea.sourceforge.net/labrea-info.html">LaBrea</a> - 接管未使用的 IP 地址，创建对蠕虫、黑客有吸引力的虚拟服务</li>
+<li><a href="https://github.com/Cymmetria/MTPot">MTPot</a> - 专注于 Mirai 的开源 Telnet 蜜罐</li>
+<li><a href="https://github.com/blaverick62/SIREN">SIREN</a> - 半智能蜜罐网络 - 蜜网只能虚拟环境</li>
+<li><a href="https://github.com/balte/TelnetHoney">TelnetHoney</a> - 简单的 telnet 蜜罐</li>
+<li><a href="https://github.com/jekil/UDPot">UDPot Honeypot</a> - 简单 UDP / DNS 蜜罐脚本</li>
+<li><a href="https://github.com/fnzv/YAFH">Yet Another Fake Honeypot (YAFH)</a> - 使用 Go 编写的简单蜜罐</li>
+<li><a href="https://github.com/ajackal/arctic-swallow">arctic-swallow</a> - 低交互蜜罐</li>
+<li><a href="https://github.com/mushorg/glutton">glutton</a> - 可喂食蜜罐</li>
+<li><a href="https://github.com/Mojachieee/go-HoneyPot">go-HoneyPot</a> - 使用 Go 编写的蜜罐</li>
+<li><a href="https://github.com/kingtuna/go-emulators">go-emulators</a> - Go 蜜罐模拟器</li>
+<li><a href="https://github.com/sec51/honeymail">honeymail</a> - 使用 Go 编写的 SMTP 蜜罐</li>
+<li><a href="https://github.com/tillmannw/honeytrap">honeytrap</a> - 一个用于捕获针对 TCP 和 UDP 服务攻击的低交互蜜罐</li>
+<li><a href="https://github.com/yvesago/imap-honey">imap-honey</a> - 使用 Go 编写的 IMAP 蜜罐</li>
+<li><a href="https://www.openhub.net/p/mwcollectd">mwcollectd</a> - 联合 nepenthes 和 honeytrap 的最佳功能实现的多功能恶意软件收集蜜罐</li>
+<li><a href="https://github.com/lnslbrty/potd">potd</a> - 使用 Linux 的 Namespaces、Seccomp 与 Capabilities 构建针对 OpenWrt/IoT 设备的低中交互 SSH/TCP 蜜罐</li>
+<li><a href="https://github.com/bartnv/portlurker">portlurker</a> - 用于协议猜测和安全字符显示的端口监听工具/蜜罐</li>
+<li><a href="https://github.com/rshipp/slipm-honeypot">slipm-honeypot</a> - 简单的低交互端口监听蜜罐</li>
+<li><a href="https://github.com/Phype/telnet-iot-honeypot">telnet-iot-honeypot</a> - 为了捕获僵尸网络二进制文件，使用 Python 编写的 telnet 蜜罐</li>
+<li><a href="https://github.com/robertdavidgraham/telnetlogger">telnetlogger</a> - 跟踪 Mirai 的 Telnet 蜜罐</li>
+<li><a href="https://github.com/magisterquis/vnclowpot">vnclowpot</a> - 低交互的 VNC 蜜罐</li>
+</ul>
+</li>
+<li>
+<p>IDS 签名生成</p>
+<ul>
+<li><a href="http://www.icir.org/christian/honeycomb/">Honeycomb</a> - 使用蜜罐自动创建签名</li>
+</ul>
+</li>
+<li>
+<p>查找服务提供商的 ASN 与前缀</p>
+<ul>
+<li><a href="http://www.cc2asn.com/">CC2ASN</a> - 简单的查询服务</li>
+</ul>
+</li>
+<li>
+<p>数据收集/数据共享</p>
+<ul>
+<li><a href="https://github.com/rep/hpfeeds/">HPFeeds</a> - 轻量认证的订阅发布协议</li>
+</ul>
+</li>
+<li>
+<p>集中管理工具</p>
+<ul>
+<li><a href="http://www.nepenthespharm.com/">PHARM</a> - 管理、统计、分析你的分布式 Nepenthes 蜜罐</li>
+</ul>
+</li>
+<li>
+<p>网络连接分析工具</p>
+<ul>
+<li><a href="http://impost.sourceforge.net/">Impost</a> - 网络安全审计工具，用于取证分析被破坏/易受攻击的守护进程</li>
+</ul>
+</li>
+<li>
+<p>蜜罐部署</p>
+<ul>
+<li><a href="http://threatstream.github.io/mhn/">Modern Honeynet Network</a> - 让蜜罐的管理与部署更简单</li>
+</ul>
+</li>
+<li>
+<p>Wireshark 的蜜罐扩展</p>
+<ul>
+<li><a href="https://www.honeynet.org/project/WiresharkExtensions">Wireshark Extensions</a> - 支持应用针对 PCAP 文件的 Snort IDS 规则与签名</li>
+</ul>
+</li>
+<li>
+<p>客户端蜜罐</p>
+<ul>
+<li><a href="https://www.gfi.com/products-and-solutions/all-products">CWSandbox / GFI Sandbox</a></li>
+<li><a href="https://redmine.honeynet.org/projects/linux-capture-hpc/wiki">Capture-HPC-Linux</a></li>
+<li><a href="https://github.com/CERT-Polska/HSN-Capture-HPC-NG">Capture-HPC-NG</a></li>
+<li><a href="https://projects.honeynet.org/capture-hpc">Capture-HPC</a> - 高交互客户端蜜罐</li>
+<li><a href="http://www.atomicsoftwaresolutions.com/">HoneyBOT</a></li>
+<li><a href="https://projects.honeynet.org/honeyc">HoneyC</a></li>
+<li><a href="https://github.com/CERT-Polska/hsn2-bundle">HoneySpider Network</a> - 集成多个客户端蜜罐检测恶意网站的可扩展系统</li>
+<li><a href="https://code.google.com/archive/p/gsoc-honeyweb/">HoneyWeb</a> - 为管理与远程共享 Honeyclients 资源而创建的 Web 界面</li>
+<li><a href="https://github.com/urule99/jsunpack-n">Jsunpack-n</a></li>
+<li><a href="http://monkeyspider.sourceforge.net">MonkeySpider</a></li>
+<li><a href="https://github.com/honeynet/phoneyc">PhoneyC</a></li>
+<li><a href="https://github.com/shjalayeri/pwnypot">Pwnypot</a> - 高交互客户端蜜罐</li>
+<li><a href="https://github.com/thugs-rumal/">Rumal</a></li>
+<li><a href="https://www.cs.vu.nl/~herbertb/misc/shelia/">Shelia</a></li>
+<li><a href="https://buffer.github.io/thug/">Thug</a></li>
+<li><a href="https://thug-distributed.readthedocs.io/en/latest/index.html">Thug Distributed Task Queuing</a></li>
+<li><a href="https://www.honeynet.org/project/Trigona">Trigona</a></li>
+<li><a href="https://urlquery.net/">URLQuery</a></li>
+<li><a href="https://github.com/Masood-M/yalih">YALIH (Yet Another Low Interaction Honeyclient)</a> - 低交互客户端蜜罐，旨在通过签名，异常和模式匹配技术检测恶意网站</li>
+</ul>
+</li>
+<li>
+<p>蜜罐</p>
+<ul>
+<li><a href="http://www.all.net/dtk/dtk.html">Deception Toolkit</a></li>
+<li><a href="https://github.com/mushorg/imhoneypot">IMHoneypot</a></li>
+</ul>
+</li>
+<li>
+<p>PDF 文档检查工具</p>
+<ul>
+<li><a href="https://github.com/jesparza/peepdf">peepdf</a></li>
+</ul>
+</li>
+<li>
+<p>混合低/高交互蜜罐</p>
+<ul>
+<li><a href="http://honeybrid.sourceforge.net">HoneyBrid</a></li>
+</ul>
+</li>
+<li>
+<p>SSH 蜜罐</p>
+<ul>
+<li><a href="https://github.com/morian/blacknet">Blacknet</a> - SSH 蜜罐系统</li>
+<li><a href="https://github.com/cowrie/cowrie">Cowrie</a> - Cowrie SSH 蜜罐 (基于 kippo)</li>
+<li><a href="https://github.com/xme/dshield-docker">DShield docker</a> - 启用了 DShield 输出的 Docker 容器</li>
+<li><a href="https://github.com/tnich/honssh">HonSSH</a> - 记录客户端与服务器之间所有 SSH 通信</li>
+<li><a href="https://github.com/Cryptix720/HUDINX">HUDINX</a> - 用于记录暴力破解的低交互 SSH 蜜罐，记录攻击者全部 Shell 交互</li>
+<li><a href="http://kojoney.sourceforge.net/">Kojoney</a></li>
+<li><a href="https://github.com/madirish/kojoney2">Kojoney2</a> - 根据 Kojoney 用 Python 编写的低交互 SSH 蜜罐</li>
+<li><a href="https://github.com/desaster/kippo">Kippo</a> - 中交互 SSH 蜜罐</li>
+<li><a href="https://github.com/gregcmartin/Kippo_JunOS">Kippo_JunOS</a> - 基于 Kippo 的蜜罐</li>
+<li><a href="https://github.com/madirish/kojoney2">Kojoney2</a> - Jose Antonio Coret 使用 Python 编写，基于 Kojoney 的低交互 SSH 蜜罐</li>
+<li><a href="http://kojoney.sourceforge.net/">Kojoney</a> - 基于 Python 的低交互蜜罐，使用 Twisted Conch 模拟 SSH 服务</li>
+<li><a href="http://longtail.it.marist.edu/honey/">LongTail Log Analysis @ Marist College</a> - 分析 SSH 蜜罐日志</li>
+<li><a href="https://github.com/batchmcnulty/Malbait">Malbait</a> - 使用 Perl 实现的 TCP/UDP 蜜罐</li>
+<li><a href="https://github.com/ncouture/MockSSH">MockSSH</a> - 支持定义的所有命令的 SSH 服务器</li>
+<li><a href="https://github.com/xlfe/cowrie2neo">cowrie2neo</a> - 解析 cowrie 蜜罐日志到 neo4j 数据库</li>
+<li><a href="https://github.com/ashmckenzie/go-sshoney">go-sshoney</a> - SSH 蜜罐</li>
+<li><a href="https://github.com/fzerorubigd/go0r">go0r</a> - 使用 Go 编写的简单 SSH 蜜罐</li>
+<li><a href="https://github.com/PaulMaddox/gohoney">gohoney</a> - 使用 Go 编写的 SSH 蜜罐</li>
+<li><a href="https://github.com/sahilm/hived">hived</a> - 基于 Go 编写的蜜罐</li>
+<li><a href="https://github.com/joshrendek/hnypots-agent">hnypots-agent)</a> - 记录用户名和密码组合的 SSH 服务器</li>
+<li><a href="https://github.com/mdp/honeypot.go">honeypot.go</a> - 使用 Go 编写的 SSH 蜜罐</li>
+<li><a href="https://github.com/ppacher/honeyssh">honeyssh</a> - 凭据 dumping 的 SSH 蜜罐</li>
+<li><a href="https://github.com/czardoz/hornet">hornet</a> - 支持多虚拟主机的中交互 SSH 蜜罐</li>
+<li><a href="https://github.com/JustinAzoff/ssh-auth-logger">ssh-auth-logger</a> - 低\零交互 SSH 蜜罐</li>
+<li><a href="https://github.com/droberson/ssh-honeypot">ssh-honeypot</a> - 伪造 SSHD，记录 IP 地址、用户名与密码</li>
+<li><a href="https://github.com/amv42/sshd-honeypot">ssh-honeypot</a> - OpenSSH DEAMON 的改版，将命令转发到 Cowrie</li>
+<li><a href="https://github.com/sjinks/ssh-honeypotd">ssh-honeypotd</a> - C 编写的低交互 SSH 蜜罐</li>
+<li><a href="https://github.com/traetox/sshForShits">sshForShits</a> - 高交互 SSH 蜜罐框架</li>
+<li><a href="https://github.com/jaksi/sshesame">sshesame</a> - 记录登录活动的虚假 SSH 服务器</li>
+<li><a href="https://github.com/magisterquis/sshhipot">sshhipot</a> - 高交互中间人 SSH 蜜罐</li>
+<li><a href="https://github.com/magisterquis/sshlowpot">sshlowpot</a> - Go 编写的低交互 SSH 蜜罐    </li>
+<li><a href="https://github.com/mkishere/sshsyrup">sshsyrup</a> - 简单的 SSH 蜜罐，捕获终端活动并上传到 asciinema.org</li>
+<li><a href="https://github.com/lanjelot/twisted-honeypots">twisted-honeypots</a> - 基于 Twisted 的 SSH\FTP\Telnet 的蜜罐</li>
+</ul>
+</li>
+<li>
+<p>分布式传感器项目</p>
+<ul>
+<li><a href="https://sites.google.com/site/webhoneypotsite/">DShield Web Honeypot Project</a></li>
+</ul>
+</li>
+<li>
+<p>PCAP 分析工具</p>
+<ul>
+<li><a href="https://projects.honeynet.org/honeysnap/">Honeysnap</a></li>
+</ul>
+</li>
+<li>
+<p>网络流量重定向工具</p>
+<ul>
+<li><a href="https://projects.honeynet.org/honeywall/">Honeywall</a></li>
+</ul>
+</li>
+<li>
+<p>混合内容的分布式蜜罐</p>
+<ul>
+<li><a href="https://bruteforcelab.com/honeydrive">HoneyDrive</a></li>
+</ul>
+</li>
+<li>
+<p>蜜罐传感器</p>
+<ul>
+<li><a href="https://redmine.honeynet.org/projects/honeeepi/wiki">Honeeepi</a> - Raspberry Pi 上一款基于定制 Raspbian 操作系统的蜜罐</li>
+</ul>
+</li>
+<li>
+<p>File carving</p>
+<ul>
+<li><a href="https://www.cgsecurity.org/">TestDisk &amp; PhotoRec</a></li>
+</ul>
+</li>
+<li>
+<p>Windows 可用的行为分析工具</p>
+<ul>
+<li><a href="https://www.honeynet.org/node/315">Capture BAT</a></li>
+</ul>
+</li>
+<li>
+<p>Live CD</p>
+<ul>
+<li><a href="https://www.secviz.org/node/89">DAVIX</a> - DAVIX Released </li>
+</ul>
+</li>
+<li>
+<p>Spamtrap</p>
+<ul>
+<li><a href="https://metacpan.org/pod/release/MIKER/Mail-SMTP-Honeypot-0.11/Honeypot.pm">Mail::SMTP::Honeypot</a> - 提供标准 SMTP 服务器工具的 Perl 模块</li>
+<li><a href="https://github.com/awhitehatter/mailoney">Mailoney</a> - Python 编写的 SMTP 蜜罐，具有开放中继、凭据记录等功能</li>
+<li><a href="https://github.com/johestephan/VerySimpleHoneypot">SendMeSpamIDS.py</a> - 获得所有 IDS 和分析设备的简单 SMTP</li>
+<li><a href="https://github.com/shiva-spampot/shiva">Shiva</a> - 垃圾邮件蜜罐与智能分析工具<ul>
+<li><a href="https://www.pentestpartners.com/security-blog/shiva-the-spam-honeypot-tips-and-tricks-for-getting-it-up-and-running/">Shiva The Spam Honeypot Tips And Tricks For Getting It Up And Running</a></li>
+</ul>
+</li>
+<li><a href="https://github.com/miguelraulb/spamhat">SpamHAT</a> - 垃圾邮件蜜罐工具</li>
+<li><a href="http://www.spamhole.net/">Spamhole</a></li>
+<li><a href="https://github.com/jadb/honeypot">honeypot</a> - 蜜罐项目组非官方 PHP 的 SDK</li>
+<li><a href="http://man.openbsd.org/cgi-bin/man.cgi?query=spamd%26apropos=0%26sektion=0%26manpath=OpenBSD+Current%26arch=i386%26format=html">spamd</a></li>
+</ul>
+</li>
+<li>
+<p>商业蜜网</p>
+<ul>
+<li><a href="https://cymmetria.com/products/mazerunner/">Cymmetria Mazerunner</a> - 可引导攻击者远离真实目标，并创建攻击痕迹跟踪</li>
+</ul>
+</li>
+<li>
+<p>服务器（蓝牙）</p>
+<ul>
+<li><a href="https://github.com/andrewmichaelsmith/bluepot">Bluepot</a></li>
+</ul>
+</li>
+<li>
+<p>Android 应用程序动态分析</p>
+<ul>
+<li><a href="https://code.google.com/archive/p/droidbox/">Droidbox</a></li>
+</ul>
+</li>
+<li>
+<p>Docker 化的低交互蜜罐</p>
+<ul>
+<li><a href="https://github.com/sreinhardt/Docker-Honeynet">Docker honeynet</a> - 部署与 Docker 容器中的一些蜜网工具</li>
+<li><a href="https://hub.docker.com/r/honeynet/thug/">Dockerized Thug</a> - 基于 <a href="https://github.com/buffer/thug">Thug</a> 的 Docker 蜜罐，用于分析恶意 Web 内容</li>
+<li><a href="https://github.com/mrschyte/dockerpot">Dockerpot</a> - 基于 Docker 的蜜罐</li>
+<li><a href="https://github.com/andrewmichaelsmith/manuka">Manuka</a> - 基于 Docker 的蜜罐 (Dionaea &amp; Kippo)</li>
+<li><a href="https://github.com/run41/honey_ports">honey_ports</a> - 利用 Docker 进行蜜罐的部署发现端口扫描简单有效的办法</li>
+<li><a href="https://github.com/MattCarothers/mhn-core-docker">mhn-core-docker</a> - 在 Docker 中实现的现代蜜网核心元素</li>
+</ul>
+</li>
+<li>
+<p>网络分析</p>
+<ul>
+<li><a href="https://bitbucket.org/zaccone/quechua">Quechua</a></li>
+</ul>
+</li>
+<li>
+<p>SIP Server</p>
+<ul>
+<li><a href="http://artemisa.sourceforge.net">Artemnesia VoIP</a></li>
+</ul>
+</li>
+<li>
+<p>IOT 蜜罐</p>
+<ul>
+<li><a href="https://github.com/omererdem/honeything">HoneyThing</a> - TR-069 蜜罐</li>
+<li><a href="https://github.com/darkarnium/kako">Kako</a> - 常见嵌入式设备漏洞的蜜罐</li>
+</ul>
+</li>
+<li>
+<p>Honeytokens</p>
+<ul>
+<li><a href="https://github.com/thinkst/canarytokens">CanaryTokens</a> - Honeytoken 生成器，Dashboard 在 <a href="https://canarytokens.org/generate">CanaryTokens.org</a></li>
+<li><a href="https://github.com/0x4D31/honeybits">Honeybits</a> - 旨在通过在生产服务器和工作站中传播 breadcrumbs 和 honeytokens 来诱使攻击者进入蜜罐，从而提高诱捕率</li>
+<li><a href="https://github.com/0x4D31/honeylambda">Honeyλ (HoneyLambda)</a> - 简单的无服务器应用程序，旨在创建和监控 AWS Lambda 和 Amazon API Gateway 之上的网址 honeytokens</li>
+<li><a href="https://github.com/secureworks/dcept">dcept</a> - 部署、检测活动目录使用情况的 honeytokens</li>
+<li><a href="https://github.com/0x4D31/honeyku">honeyku</a> - 基于 Heroku 的 Web 蜜罐</li>
+</ul>
+</li>
+</ul>
+<h2 id="honeyd">Honeyd 工具</h2>
+<ul>
+<li>
+<p>Honeyd 插件</p>
+<ul>
+<li><a href="http://www.honeyd.org/tools.php">Honeycomb</a></li>
+</ul>
+</li>
+<li>
+<p>Honeyd 查看工具</p>
+<ul>
+<li><a href="http://honeyview.sourceforge.net/">Honeyview</a></li>
+</ul>
+</li>
+<li>
+<p>Honeyd 与 MySQL 的连接</p>
+<ul>
+<li><a href="https://bruteforcelab.com/honeyd2mysql">Honeyd2MySQL</a></li>
+</ul>
+</li>
+<li>
+<p>Honeyd 统计数据可视化脚本</p>
+<ul>
+<li><a href="https://bruteforcelab.com/honeyd-viz">Honeyd-Viz</a></li>
+</ul>
+</li>
+<li>
+<p>Honeyd 统计</p>
+<ul>
+<li><a href="https://github.com/DataSoft/Honeyd/blob/master/scripts/misc/honeydsum-v0.3/honeydsum.pl">Honeydsum.pl</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="_5">网络与行为分析</h2>
+<ul>
+<li>
+<p>沙盒</p>
+<ul>
+<li><a href="http://www.few.vu.nl/argos/">Argos</a> - 用于捕获零日攻击的模拟器</li>
+<li><a href="https://help.comodo.com/topic-72-1-451-4768-.html">COMODO automated sandbox</a></li>
+<li><a href="https://cuckoosandbox.org/">Cuckoo</a> - 领先的开源自动化恶意软件分析系统</li>
+<li><a href="https://github.com/buffer/pylibemu">Pylibemu</a> - Libemu Cython </li>
+<li><a href="https://monkey.org/~jose/software/rfi-sandbox/">RFISandbox</a> - 使用 PHP 5.x 脚本在 <a href="https://pecl.php.net/package/funcall">funcall</a> 上构建的沙盒</li>
+<li><a href="https://github.com/m4rco-/dorothy2">dorothy2</a> - Ruby 编写的恶意软件/僵尸网络分析框架</li>
+<li><a href="https://github.com/hbhzwj/imalse">imalse</a> - 集成的恶意软件仿真工具与模拟工具</li>
+<li><a href="https://github.com/buffer/libemu">libemu</a> - Shellcode 模拟库，对 Shellcode 检测十分有用</li>
+</ul>
+</li>
+<li>
+<p>沙盒即服务</p>
+<ul>
+<li><a href="https://www.hybrid-analysis.com">Hybrid Analysis</a> - 由 Payload Security 提供的免费恶意软件分析服务，可使用其独特的混合分析技术检测和分析未知威胁</li>
+<li><a href="https://jbxcloud.joesecurity.org/login">Joebox Cloud</a> - 确定 Windows、Android 和 Mac OS X 上的恶意文件（包括 PE、PDF、DOC、PPT、XLS、APK、URL 和 MachO）的行为，判断其是否存在可疑活动</li>
+<li><a href="https://www.virustotal.com/">VirusTotal</a></li>
+<li><a href="https://malwr.com/">malwr.com</a> - 提供免费恶意软件分析服务与社区</li>
+</ul>
+</li>
+</ul>
+<h2 id="_6">数据分析工具</h2>
+<ul>
+<li>
+<p>前端</p>
+<ul>
+<li><a href="https://github.com/rubenespadas/DionaeaFR">DionaeaFR</a> - Dionaea 蜜罐前端 Web</li>
+<li><a href="https://github.com/jedie/django-kippo">Django-kippo</a> - 用于 kippo SSH 蜜罐的 Django 程序</li>
+<li><a href="https://github.com/GovCERT-CZ/Shockpot-Frontend">Shockpot-Frontend</a> - 用于可视化 Shockpot 蜜罐中数据的脚本</li>
+<li><a href="https://github.com/aplura/Tango">Tango</a> - 使用 Splunk 处理蜜罐情报</li>
+<li><a href="https://github.com/GovCERT-CZ/Wordpot-Frontend">Wordpot-Frontend</a> - 用于可视化 Wordpot 蜜罐中数据的脚本</li>
+<li><a href="https://github.com/schmalle/honeyalarmg2">honeyalarmg2</a> - 用于显示蜜罐数据的简化 UI</li>
+<li><a href="https://github.com/Joss-Steward/honeypotDisplay">honeypotDisplay</a> - 展示 SSH 蜜罐的 Flask 网站</li>
+</ul>
+</li>
+<li>
+<p>可视化</p>
+<ul>
+<li><a href="https://github.com/hgascon/acapulco">Acapulco</a> - 自动攻击群体图构建</li>
+<li><a href="https://github.com/ayrus/afterglow-cloud">Afterglow Cloud</a></li>
+<li><a href="http://afterglow.sourceforge.net/">Afterglow</a></li>
+<li><a href="https://github.com/katkad/Glastopf-Analytics">Glastopf Analytics</a> - 简单蜜罐统计</li>
+<li><a href="https://github.com/SneakersInc/HoneyMalt">HoneyMalt</a> - Maltego 转换映射蜜罐系统</li>
+<li><a href="https://github.com/fw42/honeymap">HoneyMap</a> - 显示实时 Websocket 流的 SVG 地图</li>
+<li><a href="https://sourceforge.net/projects/honeystats/">HoneyStats</a> - Honeynet 的统计视图</li>
+<li><a href="https://github.com/yuchincheng/HpfeedsHoneyGraph">HpfeedsHoneyGraph</a> - 可视化 hpfeeds 日志的程序</li>
+<li><a href="https://github.com/mfontani/kippo-stats">Kippo stats</a> - 为 kippo SSH 蜜罐展示数据的程序</li>
+<li><a href="https://bruteforcelab.com/kippo-graph">Kippo-Graph</a> - 用于可视化 Kippo 蜜罐中数据的脚本</li>
+<li><a href="https://github.com/jpyorre/IntelligentHoneyNet">The Intelligent HoneyNet</a> - 试图创建蜜罐中可操作信息的智能蜜网项目</li>
+<li><a href="https://github.com/oguzy/ovizart">ovizart</a> - 可视化网络流量分析</li>
+</ul>
+</li>
+</ul>
+<h2 id="_7">指南</h2>
+<ul>
+<li><a href="https://dtag-dev-sec.github.io/mediator/feature/2015/03/17/concept.html">T-Pot: 多蜜罐平台</a></li>
+<li>
+<p><a href="https://github.com/andrewmichaelsmith/honeypot-setup-script/">蜜罐 (Dionaea and kippo) 设置脚本</a></p>
+</li>
+<li>
+<p>部署</p>
+<ul>
+<li><a href="http://andrewmichaelsmith.com/2012/03/dionaea-honeypot-on-ec2-in-20-minutes/">Dionaea and EC2 in 20 Minutes</a> - 在 EC2 上设置 Dionaea 的教程</li>
+<li><a href="https://isc.sans.edu/diary/22680">Using a Raspberry Pi honeypot to contribute data to DShield/ISC</a> - 基于 Raspberry Pi 的系统可以收集比防火墙日志更丰富的日志</li>
+<li><a href="https://github.com/free5ty1e/honeypotpi">honeypotpi</a> - 将 Raspberry Pi 变成 HoneyPot Pi 的脚本</li>
+</ul>
+</li>
+<li>
+<p>研究论文</p>
+<ul>
+<li><a href="https://github.com/shbhmsingh72/Honeypot-Research-Papers">Honeypot research papers</a> - 研究蜜罐论文的 PDF</li>
+<li><a href="https://link.springer.com/article/10.1007%2Fs10115-008-0137-3">vEYE</a> - 自传播蠕虫行为痕迹的检测与分析</li>
+</ul>
+</li>
+</ul>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../0x6_VMs/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 💿 虚拟机&amp;集成环境" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              💿 虚拟机&集成环境
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../0x8_malware_analysis/" class="md-footer__link md-footer__link--next" aria-label="下一页: 🦠 恶意软件分析" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              🦠 恶意软件分析
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.53c85856.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.716f8af4.min.js"></script>
+      
+    
+  </body>
+</html>
